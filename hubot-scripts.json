@@ -43,5 +43,6 @@
     "wikipedia.coffee",
     "wolfram.coffee",
     "xkcd.coffee",
-    "yomama.coffee"
+    "yomama.coffee",
+    "youtube.coffee"
 ]
