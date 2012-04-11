@@ -1,1 +1,1 @@
-web: bin/hubot -a campfire -n jammer -l @jammer -l dbot
+web: bin/hubot -a campfire -n jammer -l @jammer -l dbot -l @j -l @jam
