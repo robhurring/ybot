@@ -61,18 +61,12 @@ bad = [
 	'http://demotivators.despair.com/individualitydemotivator.jpg',
 	'http://demotivators.despair.com/wisdomdemotivator.jpg',
 	'http://demotivators.despair.com/maturitydemotivator.jpg',
-	'http://demotivators.despair.com/hopedemotivator.jpg',
-  'You can get to that later',
-  'Some people are destined for greatness. Fortunately, you\'re not one of them.',
-  'The first step to failure is trying.',
-  'If at first you don\'t succeed...don\'t act surprised.',
-  'Apathy: If we don\'t take care of the customer,maybe they\'ll stop bugging us.',
-  'If we really care for the customer we\'d send them somewhere better'
+	'http://demotivators.despair.com/hopedemotivator.jpg'
 ]
 
 module.exports = (robot) ->
   robot.respond /\b(inspire|motivate)\b me/i, (msg) ->
     msg.reply msg.random good
-  
+
   robot.respond /\b(demotivate|uninspire)\b me/i, (msg) ->
-    msg.reply msg.random bad
+    msg.send msg.random bad
