@@ -42,5 +42,6 @@
     "wolfram.coffee",
     "xkcd.coffee",
     "yomama.coffee",
-    "youtube.coffee"
+    "youtube.coffee",
+    "animal.coffee"
 ]
