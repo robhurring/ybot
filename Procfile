@@ -1,1 +1,1 @@
-bot: bin/hubot -a campfire -n Hubot
+bot: bin/hubot -a campfire -n Hubot -l hu -l hubut -l @hubot -l @hu
