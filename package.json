@@ -18,10 +18,10 @@
     "hubot": "2.2.0",
     "hubot-scripts": ">=2.0.8",
     "optparse": "1.0.3",
-    "soupselect":"x",
-    "xml2js":"x",
-    "jsdom":"x",
-    "htmlparser":"x"
+    "soupselect":"0.2.x",
+    "xml2js":"0.1.13",
+    "jsdom":"0.2.14",
+    "htmlparser":"1.7.6"
   },
 
   "engines": {
