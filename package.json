@@ -20,7 +20,8 @@
     "optparse": "1.0.3",
     "soupselect":"x",
     "xml2js":"x",
-    "jsdom":"x"
+    "jsdom":"x",
+    "htmlparser":"x"
   },
 
   "engines": {
