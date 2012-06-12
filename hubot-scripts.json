@@ -21,7 +21,6 @@
     "rageface.coffee",
     "remind.coffee",
     "resque.coffee",
-    "rollout.coffee",
     "spotify.coffee",
     "teamcity.coffee",
     "tell.coffee",
