@@ -29,5 +29,8 @@
     "weather.coffee",
     "wiki.coffee",
     "xkcd.coffee",
-    "yomama.coffee"
+    "yomama.coffee",
+    "google-images.coffee",
+    "maps.coffee",
+    "youtube.coffee"
 ]
