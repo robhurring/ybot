@@ -23,7 +23,6 @@
     "haters.coffee",
     "inigo-montoya.coffee",
     "insult.coffee",
-    "joinme.coffee",
     "karma.coffee",
     "linsanity.coffee",
     "likeaboss.coffee",
@@ -48,5 +47,8 @@
     "youtube.coffee",
     "animal.coffee",
     "mta.coffee",
-    "gifbin.coffee"
+    "gifbin.coffee",
+    "decide.coffee",
+    "do-it-live.coffee",
+    "nettipot.coffee"
 ]
