@@ -47,5 +47,7 @@
     "xkcd.coffee",
     "yomama.coffee",
     "youtube.coffee",
-    "animal.coffee"
+    "animal.coffee",
+    "mta.coffee",
+    "gifbin.coffee"
 ]
