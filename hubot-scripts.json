@@ -1,4 +1,8 @@
 [
+    "airbrake.coffee",
+    "teamcity.coffee",
+    "pivotal.coffee",
+    "pivotalstorylisten.coffee",
     "redis-brain.coffee",
     "shipit.coffee",
     "alot.coffee",
