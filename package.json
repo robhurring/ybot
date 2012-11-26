@@ -22,7 +22,9 @@
     "xml2js":"0.1.13",
     "jsdom":"0.2.14",
     "htmlparser":"1.7.6",
-    "cheerio": "0.7.0"
+    "cheerio": "0.7.0",
+    "wwwdude": "0.1.0",
+    "underscore": "x"
   },
 
   "engines": {
