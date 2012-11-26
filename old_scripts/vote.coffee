@@ -18,7 +18,7 @@ class VoteBot
     @robot.brain.data.vote_bot = @cache
 
   addPoll: (question) ->
-    @cache.push {question: question, tally: 0}
+    @cache.push {question: question, tally: 0, votes: 0, percent: 0}
     @flushCache()
     id = @cache.length
     id
@@ -39,6 +39,8 @@ class VoteBot
         poll.tally += 1
       else
         poll.tally -= 1
+      poll.votes += 1
+      poll.percent = (poll.tally / (poll.votes || 1) * 100)
     @flushCache()
 
   polls: ->
@@ -52,7 +54,10 @@ module.exports = (robot) ->
     poll = voteBot.get id
     if poll?
       voteBot.rm id
-      msg.send "Closed Poll: \"#{poll.question}\". Final Score: #{poll.tally}."
+      output = []
+      output.push "Closed Poll:\t\"#{poll.question}\""
+      output.push "\t\tFinal Score: #{poll.tally} (#{poll.percent || '?'}% of #{poll.votes || '?'} votes)"
+      msg.send output.join("\n")
     else
       msg.reply "There is no poll with ID #{id}."
 
@@ -63,8 +68,11 @@ module.exports = (robot) ->
     if polls.length > 0
       for poll,id in polls
         do (poll, id) ->
-          output.push "[ID: #{id}] #{poll.question}: #{poll.tally} points."
-      msg.send output.join("\n"), "\nVote with: #{robot.name} vote [ID] +/-"
+          output.push "Poll #{id + 1}:\t\"#{poll.question}\""
+          output.push "\t\t#{poll.tally} points from #{poll.votes || '?'} votes (#{poll.percent || '?'}%)"
+          output.push "\t\t(Vote with: #{robot.name} vote #{id + 1} +/-)"
+
+      msg.send output.join("\n")#, "\nVote with: #{robot.name} vote [ID] +/-"
     else
       msg.send "There aren't any polls!\nAdd one with: #{robot.name} poll me \"Question?\""
 
@@ -74,11 +82,16 @@ module.exports = (robot) ->
 
     if poll?
       voteBot.vote id, (pm == '+')
-      msg.reply "#{poll.question}: #{poll.tally}"
+      msg.reply "\"#{poll.question}\" -> #{poll.tally} points"
     else
       msg.reply 'Poll does not exist!'
 
   robot.respond /poll me "([^"]+)"/i, (msg) ->
     question = msg.match[1]
     id = voteBot.addPoll question
-    msg.reply "Poll added in slot #{id}, vote up or down using:", "For Yes: #{robot.name} vote 1 +", "For No: #{robot.name} vote 1 -"
+    output = []
+    output.push "\"#{question}\" is open for voting!"
+    output.push "\tTo vote up:   #{robot.name} vote #{id} +"
+    output.push "\tTo vote down: #{robot.name} vote #{id} -"
+    # msg.reply "Poll added in slot #{id}, vote up or down using:", "For Yes: #{robot.name} vote #{id} +", "For No: #{robot.name} vote #{id} -"
+    msg.send output.join("\n")
