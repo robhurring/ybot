@@ -33,7 +33,7 @@
     "megusta.coffee",
     "mta.coffee",
     "polite.coffee",
-    "rage.coffee",
+    "rageface.coffee",
     "remind.coffee",
     "roll.coffee",
     "shorten.coffee",
@@ -48,6 +48,5 @@
     "decide.coffee",
     "do-it-live.coffee",
     "nettipot.coffee",
-    "xkcd.coffee",
-    "yomama.coffee"
+    "xkcd.coffee"
 ]
