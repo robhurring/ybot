@@ -1,8 +1,11 @@
 # Description:
-#   Lyrics from spotify
+#   Get lryics for a song by using a spotify link
 #
 # Commands:
 #   hubot lyrify <spotify url> - Get lyrics from a spotify song
+#
+# Author:
+#   robhurring
 
 module.exports = (robot) ->
   robot.hear /lyrify ((?:http:\/\/open.spotify.com\/(track|album|artist)\/|spotify:(track|album|artist):)\S+)/, (msg) ->
