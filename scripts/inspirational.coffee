@@ -1,3 +1,6 @@
+# Commands:
+#   hubot motivate me   - Get an inspirational quote
+#   hubot demotivate me - Get a demotivational image
 good = [
   'Storms make oaks take roots.',
   'If you do not hope, you will not find what is beyond your hopes.',

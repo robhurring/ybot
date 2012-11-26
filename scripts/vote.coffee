@@ -1,3 +1,12 @@
+# Description:
+#   Vote counter
+#
+# Commands:
+#   hubot poll me <what> - Create a poll
+#   hubot polls - A list of open polls
+#   hubot close poll <poll-id> - Close the current poll
+#   hubot vote <poll-id> (+ or -) - Vote in the poll
+
 class VoteBot
   constructor: (@robot) ->
     @cache = []
@@ -13,7 +22,7 @@ class VoteBot
     @flushCache()
     id = @cache.length
     id
-  
+
   rm: (id) ->
     poll = @get(id)
     if poll?
@@ -62,7 +71,7 @@ module.exports = (robot) ->
   robot.respond /vote (\d+) (\+|\-)/i, (msg) ->
     [id, pm] = [msg.match[1], msg.match[2]]
     poll = voteBot.get id
-    
+
     if poll?
       voteBot.vote id, (pm == '+')
       msg.reply "#{poll.question}: #{poll.tally}"

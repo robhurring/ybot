@@ -1,6 +1,9 @@
-# Interacts with the Google Maps API.
+# Description:
+#   Interacts with the Google Maps API.
 #
-# map me <query> - Returns a map view of the area returned by `query`.
+# Commands:
+#   hubot map me <query> - Returns a map view of the area returned by `query`.
+
 module.exports = (robot) ->
 
   robot.respond /(?:(satellite|terrain|hybrid)[- ])?map me (.+)/i, (msg) ->
