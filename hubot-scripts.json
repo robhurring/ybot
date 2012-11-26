@@ -36,6 +36,7 @@
     "shorten.coffee",
     "sosearch.coffee",
     "spotify.coffee",
+    "shipit.coffee",
     "tell.coffee",
     "trollicon.coffee",
     "urban.coffee",
@@ -49,4 +50,6 @@
     "decide.coffee",
     "do-it-live.coffee",
     "nettipot.coffee"
+    "xkcd.coffee",
+    "yomama.coffee"
 ]

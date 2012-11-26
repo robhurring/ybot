@@ -1,1 +1,1 @@
-bot: bin/hubot -a campfire -n Oz -l oz
+bot: bin/hubot -a campfire -n oz -l Oz -l @oz
