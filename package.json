@@ -16,7 +16,7 @@
 
   "dependencies": {
     "hubot": "2.3.4",
-    "hubot-scripts": ">=2.0.8",
+    "hubot-scripts": "2.2.2",
     "optparse": "1.0.3",
     "soupselect":"0.2.x",
     "xml2js":"0.1.13",
