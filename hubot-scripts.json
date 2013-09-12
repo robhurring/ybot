@@ -48,5 +48,6 @@
     "decide.coffee",
     "do-it-live.coffee",
     "nettipot.coffee",
-    "xkcd.coffee"
+    "xkcd.coffee",
+    "cowsay.coffee"
 ]
