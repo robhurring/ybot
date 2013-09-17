@@ -24,7 +24,7 @@ include_url_after_ms = 5000
 module.exports = (robot)->
   robot.hear /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/i, (msg) ->
     url = msg.match[1]
-    return if url.match(/\.(png|jpg|jpeg|gif)$/) # avoid titles on images
+    return if url.match(/\.(png|jpg|jpeg|gif)/) # avoid titles on images
 
     started = new Date
 
@@ -44,6 +44,9 @@ module.exports = (robot)->
       if r.statusCode == 302
         url = r.headers['location']
         return lookup_title msg, url, callback
+
+      unless r.statusCode == 200
+        return callback(null)
 
       title = null
       element = get_selector(b, 'title')
